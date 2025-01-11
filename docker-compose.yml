@@ -1,0 +1,17 @@
+services:
+  backend:
+    container_name: todo
+    image: techtodo
+    restart: on-failure
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      H2_OPTIONS: "-tcp -tcpAllowOthers -web -webAllowOthers -advertiseAddr h2-db"
+    networks:
+      - todo_network
+# Network
+networks:
+  todo_network:
+    name: todo_network
+    driver: bridge
