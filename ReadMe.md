@@ -14,9 +14,8 @@
 
 - Spring DATA
 - Lombok
-- MySql
+- H2-DB
 - Spring API
 - Docker
 - Swagger
-- ...
 

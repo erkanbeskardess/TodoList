@@ -43,7 +43,6 @@ public class TodoController  {
 
     }
 
-    //UPDATE
     @PutMapping("/update/{id}")
     public ResponseEntity<TodoDto> updateApi(@RequestBody TodoDto todoDto, @PathVariable Long id) {
 
