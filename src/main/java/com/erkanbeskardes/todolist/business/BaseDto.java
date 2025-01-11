@@ -1,6 +1,5 @@
 package com.erkanbeskardes.todolist.business;
 
-import com.erkanbeskardes.todolist.audit.AuditingAwareBaseDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,9 +11,7 @@ import java.util.Date;
 @Setter
 
 
-abstract public class BaseDto extends AuditingAwareBaseDto implements Serializable {
-
-    public static final Long serialVersionUID = 1L;
+public abstract class BaseDto implements Serializable {
 
 
     protected Long id;

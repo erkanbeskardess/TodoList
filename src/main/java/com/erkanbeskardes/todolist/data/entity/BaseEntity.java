@@ -1,6 +1,5 @@
 package com.erkanbeskardes.todolist.data.entity;
 
-import com.erkanbeskardes.todolist.audit.AuditingAwareBaseDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,21 +14,17 @@ import java.util.Date;
 
 @MappedSuperclass
 
-abstract public class BaseEntity extends AuditingAwareBaseDto implements Serializable {
-
-    public static final Long serialVersionUID = 1L;
-
+public abstract class BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // IDENTITY: Mysql
-    @Column(name = "id", insertable = true, updatable = false, unique = true)
+    @Column(name = "id", updatable = false, unique = true)
     protected Long id;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(
             name = "system_created_date",
-            insertable = true,
             updatable = false,
             nullable = false,
             unique = true,
