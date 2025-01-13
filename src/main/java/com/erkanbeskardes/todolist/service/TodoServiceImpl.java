@@ -4,7 +4,6 @@ import com.erkanbeskardes.todolist.business.TodoDto;
 import com.erkanbeskardes.todolist.data.entity.TodoEntity;
 import com.erkanbeskardes.todolist.data.mapper.TodoMapper;
 import com.erkanbeskardes.todolist.data.repository.ITodoRepository;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,6 @@ import java.util.stream.Collectors;
 @Log4j2
 
 @Service
-@RequiredArgsConstructor
 public class TodoServiceImpl implements ITodoService {
 
     // injection
@@ -43,7 +41,6 @@ public class TodoServiceImpl implements ITodoService {
     @Override
     public List<TodoDto> getAllToDo() {
         List<TodoEntity> todoEntityList = iTodoRepository.findAll();
-
 
         if (todoEntityList != null) {
 

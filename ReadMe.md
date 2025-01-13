@@ -1,10 +1,8 @@
-# Getting Started
+# Todo API
 
 ## Proje Notları
 
-### Projenin amacı
-    Spring'in birçok özelliğini kullanarak basit bir uygulama geliştirmek.
-    
+Todo projesi spring boot ile geliştirilmiş, Listeleme güncelleme ekleme ve silme işlemlerinin gerçekleştirilebildiği, Dockerize edilmiş bir backend projesidir.    
 
 ### Kurulumlar  
     
@@ -18,4 +16,14 @@
 - Spring API
 - Docker
 - Swagger
+
+**Kullanacağımız Araçlar**
+
+- Intellij idea.
+- Swagger
+- Docker Desktop
+- Postman
+
+## Erkan Beşkardeş 
+
 
